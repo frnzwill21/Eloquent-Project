@@ -1,6 +1,6 @@
-# Tugas Laravel Eloquent - Kelas 11 RPL
+# Tugas Laravel Eloquent
 
-Proyek ini adalah implementasi tugas Laravel Eloquent untuk Kelas 11 Rekayasa Perangkat Lunak (RPL). Aplikasi ini mengimplementasikan sistem manajemen `Karyawan` dan `Divisi` dengan relasi One-to-Many menggunakan Eloquent ORM.
+Proyek ini adalah implementasi tugas Laravel Eloquent untuk Kelas XI Rekayasa Perangkat Lunak (RPL). Aplikasi ini mengimplementasikan sistem manajemen `Karyawan` dan `Divisi` dengan relasi One-to-Many menggunakan Eloquent ORM.
 
 ## Deskripsi Singkat
 
@@ -19,7 +19,7 @@ Aplikasi ini menggunakan Laravel 11 dengan fitur-fitur seperti:
    npm install
    npm run build
    ```
-   *(Catatan: pastikan Anda sudah menginstall Composer dan Node.js)*
+   *(Catatan: pastikan Composer dan Node.js sudah terinstall)*
 3. Salin file `.env.example` menjadi `.env`:
    ```bash
    cp .env.example .env
@@ -54,22 +54,22 @@ Aplikasi ini menggunakan Laravel 11 dengan fitur-fitur seperti:
 ### 1. Halaman Index (List Karyawan)
 *(Menampilkan daftar tabel Karyawan yang sudah di-JOIN dengan Divisi beserta fitur Search)*
 
-![Screenshot Halaman Index](path/to/screenshot-index.png)
+![Screenshot Halaman Index](screenshots/index.png)
 
 ---
 
 ### 2. Halaman Tambah Karyawan
 *(Menampilkan Form untuk menambah data karyawan beserta pilihan relasi ke divisi)*
 
-![Screenshot Halaman Tambah](path/to/screenshot-tambah.png)
+![Screenshot Halaman Tambah](screenshots/tambah.png)
 
 ---
 
 ### 3. Halaman Edit Karyawan
 *(Menampilkan Form untuk mengubah data eksisting menggunakan metode findOrFail dan $karyawan->update())*
 
-![Screenshot Halaman Edit](path/to/screenshot-edit.png)
+![Screenshot Halaman Edit](screenshots/edit.png)
 
 ---
 
-> Dibuat untuk memenuhi Tugas Kelas 11 RPL - Materi Laravel Eloquent.
+> Dibuat untuk memenuhi Tugas Kelas XI RPL - Materi Laravel Eloquent.
