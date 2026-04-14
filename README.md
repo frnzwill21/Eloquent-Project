@@ -55,6 +55,7 @@ Aplikasi ini menggunakan Laravel 11 dengan fitur-fitur seperti:
 *(Menampilkan daftar tabel Karyawan yang sudah di-JOIN dengan Divisi beserta fitur Search)*
 
 ![Screenshot Halaman Index](screenshots/index.png)
+![Screenshot Halaman Index 2](screenshots/index2.png)
 
 ---
 
@@ -62,6 +63,7 @@ Aplikasi ini menggunakan Laravel 11 dengan fitur-fitur seperti:
 *(Menampilkan Form untuk menambah data karyawan beserta pilihan relasi ke divisi)*
 
 ![Screenshot Halaman Tambah](screenshots/tambah.png)
+![Screenshot Halaman Tambah 2](screenshots/tambah2.png)
 
 ---
 
@@ -69,6 +71,14 @@ Aplikasi ini menggunakan Laravel 11 dengan fitur-fitur seperti:
 *(Menampilkan Form untuk mengubah data eksisting menggunakan metode findOrFail dan $karyawan->update())*
 
 ![Screenshot Halaman Edit](screenshots/edit.png)
+![Screenshot Halaman Edit 2](screenshots/edit2.png)
+
+---
+
+### 4. Fitur Hapus Karyawan
+*(Menghapus data karyawan berdasarkan ID terpilih)*
+
+![Screenshot Fitur Hapus](screenshots/hapus.png)
 
 ---
 
