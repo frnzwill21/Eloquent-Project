@@ -20,6 +20,7 @@ Aplikasi ini menggunakan Laravel 11 dengan fitur-fitur seperti:
    npm run build
    ```
    *(Catatan: pastikan Composer dan Node.js sudah terinstall)*
+   
 3. Salin file `.env.example` menjadi `.env`:
    ```bash
    cp .env.example .env
