@@ -28,18 +28,6 @@
     </script>
 </head>
 <body class="bg-dark-900 text-gray-200 font-sans antialiased min-h-screen">
-    <nav class="bg-dark-800 border-b border-emerald-500/30 shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0 flex items-center gap-3">
-                        <div class="w-9 h-9 bg-emerald-500 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg ring-2 ring-emerald-500/50">E</div>
-                        <span class="text-xl font-bold bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">Eloquent App</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         @if (session('success'))
