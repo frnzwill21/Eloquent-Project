@@ -15,11 +15,48 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // Insert Divisi dummy data
+        $divisiIT = \App\Models\Divisi::create(['nama_divisi' => 'IT']);
+        $divisiHRD = \App\Models\Divisi::create(['nama_divisi' => 'HRD']);
+        $divisiFinance = \App\Models\Divisi::create(['nama_divisi' => 'Finance']);
+        $divisiMarketing = \App\Models\Divisi::create(['nama_divisi' => 'Marketing']);
+        $divisiProduksi = \App\Models\Divisi::create(['nama_divisi' => 'Produksi']);
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        // Insert Karyawan dummy data
+        \App\Models\Karyawan::create([
+            'divisi_id' => $divisiIT->id,
+            'nama' => 'Dedi',
+            'posisi' => 'Software Engineer'
+        ]);
+
+        \App\Models\Karyawan::create([
+            'divisi_id' => $divisiIT->id,
+            'nama' => 'Gatot',
+            'posisi' => 'System Administrator'
+        ]);
+
+        \App\Models\Karyawan::create([
+            'divisi_id' => $divisiHRD->id,
+            'nama' => 'Ajat',
+            'posisi' => 'HR Manager'
+        ]);
+
+        \App\Models\Karyawan::create([
+            'divisi_id' => $divisiFinance->id,
+            'nama' => 'Yudi',
+            'posisi' => 'Financial Analyst'
+        ]);
+
+        \App\Models\Karyawan::create([
+            'divisi_id' => $divisiMarketing->id,
+            'nama' => 'Aep',
+            'posisi' => 'Social Media Specialist'
+        ]);
+
+        \App\Models\Karyawan::create([
+            'divisi_id' => $divisiProduksi->id,
+            'nama' => 'Wawan',
+            'posisi' => 'Quality Control'
         ]);
     }
 }
