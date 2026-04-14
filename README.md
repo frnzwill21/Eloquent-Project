@@ -49,7 +49,7 @@ Aplikasi ini menggunakan Laravel 11 dengan fitur-fitur seperti:
 
 ## Screenshot Tampilan Aplikasi
 
-> **Catatan untuk Guru:** Berikut adalah dokumentasi Screenshot dari hasil pembuatan aplikasi tugas Eloquent.
+> Berikut adalah dokumentasi Screenshot dari hasil pembuatan aplikasi tugas Eloquent.
 
 ### 1. Halaman Index (List Karyawan)
 *(Menampilkan daftar tabel Karyawan yang sudah di-JOIN dengan Divisi beserta fitur Search)*
