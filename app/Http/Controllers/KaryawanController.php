@@ -3,63 +3,71 @@
 namespace App\Http\Controllers;
 
 use App\Models\Karyawan;
+use App\Models\Divisi;
 use Illuminate\Http\Request;
 
 class KaryawanController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $search = $request->get('search');
+        
+        $query = Karyawan::with('divisi');
+        
+        if ($search) {
+            $query->where('nama', 'like', '%' . $search . '%');
+        }
+        
+        $karyawans = $query->paginate(10);
+        
+        return view('karyawan.index', compact('karyawans', 'search'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        $divisis = Divisi::all();
+        return view('karyawan.tambah', compact('divisis'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'nama' => 'required|string|max:255',
+            'posisi' => 'required|string|max:255',
+            'divisi_id' => 'required|exists:divisis,id',
+        ]);
+
+        Karyawan::create($validatedData);
+
+        return redirect()->route('karyawan.index')->with('success', 'Data karyawan berhasil ditambahkan!');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Karyawan $karyawan)
+    public function edit($id)
     {
-        //
+        $karyawan = Karyawan::findOrFail($id);
+        $divisis = Divisi::all();
+        return view('karyawan.edit', compact('karyawan', 'divisis'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Karyawan $karyawan)
+    public function update(Request $request, $id)
     {
-        //
+        $validatedData = $request->validate([
+            'nama' => 'required|string|max:255',
+            'posisi' => 'required|string|max:255',
+            'divisi_id' => 'required|exists:divisis,id',
+        ]);
+
+        $karyawan = Karyawan::findOrFail($id);
+        $karyawan->update($validatedData);
+
+        return redirect()->route('karyawan.index')->with('success', 'Data karyawan berhasil diupdate!');
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Karyawan $karyawan)
+    public function destroy($id)
     {
-        //
-    }
+        $karyawan = Karyawan::findOrFail($id);
+        $karyawan->delete();
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Karyawan $karyawan)
-    {
-        //
+        return redirect()->route('karyawan.index')->with('success', 'Data karyawan berhasil dihapus!');
     }
 }
